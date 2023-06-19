@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=63.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["demolyzer"]
+
+[project]
+name = "demolyzer"
+
+version = "0.0.0"
+
+description = "Statistics and Data Library for Analyzing TF2 demo Files"
+
+requires-python = ">=3.10"
+
+dependencies = [
+  "pandas",
+  "plotly",
+  "click",
+  "demoreel @ git+https://github.com/kavorite/demoreel.git@jpath"
+]
+
+[project.scripts]
+
+[project.optional-dependencies]
+dev = [
+    "flake8>=4.0.1",
+    "pep8-naming>=0.13.0",
+    "flake8-docstrings>=1.6.0",
+    "pytest>=7.1.2",
+    "pytest-cov>=3.0.0",
+    "isort>=5.10.1",
+    "black>=22.8.0",
+    "refurb",
+]
+
+[tool.isort]
+profile = "black"
+src_paths = ["demolyzer", "tests"]
+
+[tool.black]
+line-length = 120
+src_paths = ["demolyzer", "tests"]

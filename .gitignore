@@ -1,0 +1,9 @@
+venv
+.venv
+*.pyc
+*.egg-info
+__pycache__
+*.csv
+.DS_Store
+*.dem
+!match.dem

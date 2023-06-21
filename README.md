@@ -1,6 +1,19 @@
 # Demolyzer
 
-Demolyzer is a statistics and data library for analyzing TF2 demo files.
+Demolyzer is a statistics and data library for analyzing TF2 demo files. The main goal is to transform demo files into csv files and provide more downstream transformations to make it easier to analyze and plot data. After following the installation instructions below, basic usage is as follows:
+
+```py
+from demolyzer.stats import DemoAnalyzer
+
+my_demoanalyzer = DemoAnalyzer("path_to_my_demo.dem")
+
+# see methods in `DemoAnalyzer` for more information..
+
+my_demoanalyzer.players
+my_demoanalyzer.num_players
+
+death_stats = my_demoanalyzer.death_stats()
+print(death_stats)
 
 ## Prerequisites
 

@@ -70,6 +70,9 @@ def to_dataframe(demo_data: list[dict[str, Any]]) -> pd.DataFrame:
     ordered_cols = ["tick"] + sorted([col for col in df.columns if col != "tick"])
     df = df[ordered_cols]
 
+    # Add the copy() method
+    df = df.copy()
+
     return df
 
 

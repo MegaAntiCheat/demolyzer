@@ -60,7 +60,7 @@ def to_dataframe(demo_data: list[dict[str, Any]]) -> pd.DataFrame:
             normalized_key = normalize_nested_field(key, nested_row[key])
             to_concat.append(normalized_key)
 
-        row_df = pd.concat(to_concat, axis=1)
+        row_df = pd.concat(to_concat)
         for key in NORMALIZED_KEYS:
             row_df[key] = nested_row[key]
 
@@ -69,6 +69,9 @@ def to_dataframe(demo_data: list[dict[str, Any]]) -> pd.DataFrame:
     df = pd.concat(dfs).sort_values(by="tick")
     ordered_cols = ["tick"] + sorted([col for col in df.columns if col != "tick"])
     df = df[ordered_cols]
+
+    # Add the copy() method
+    df = df.copy()
 
     return df
 

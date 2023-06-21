@@ -14,6 +14,7 @@ my_demoanalyzer.num_players
 
 death_stats = my_demoanalyzer.death_stats()
 print(death_stats)
+```
 
 ## Prerequisites
 

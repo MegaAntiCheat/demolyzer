@@ -25,7 +25,7 @@ Python 3.10 or higher is required.
 First, clone the repository and cd into it:
 
 ```sh
-git clone https://github.com/jayceslesar/demolyzer.git
+git clone https://github.com/MegaAntiCheat/demolyzer.git
 cd demolyzer
 ```
 

@@ -1,0 +1,30 @@
+{
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "120"
+  ],
+  "black-formatter.args": [
+    "--line-length",
+    "120"
+  ],
+  "isort.args": [
+    "-l",
+    "120",
+    "--profile",
+    "black"
+  ],
+  "isort.check": true,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.rulers": [
+      120
+    ],
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+}

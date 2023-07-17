@@ -3,6 +3,7 @@
 import os
 import random
 from math import atan2, degrees
+from functools import cached_property
 
 import pandas as pd
 
@@ -48,7 +49,7 @@ class DemoAnalyzer:
 
         self.demo_file = demo_in_path
 
-    @property
+    @cached_property
     def players(self) -> dict[str, str]:
         """Get the players in this file.
 
@@ -61,7 +62,7 @@ class DemoAnalyzer:
 
         return players
 
-    @property
+    @cached_property
     def num_players(self) -> int:
         """Get the number of players in this demo file.
 
@@ -70,7 +71,7 @@ class DemoAnalyzer:
         """
         return len(self.df["players_info.steamId"].unique())
 
-    @property
+    @cached_property
     def duration(self) -> float:
         pass
 
